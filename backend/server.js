@@ -15,10 +15,9 @@ const upload = multer({ dest: "uploads" });
 
 // post router to handle file upload
 app.post("/upload", upload.single("myFile"), (req, res) => {
-  console.log("File info: " + req.file);
   res.json({ message: "file uploaded successfully" });
 })
 
 app.listen(5000, () => {
-  console.log("server running");
+  console.log("server running at http://localhost:5000");
 })
